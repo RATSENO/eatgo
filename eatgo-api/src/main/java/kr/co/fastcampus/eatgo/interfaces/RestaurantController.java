@@ -35,7 +35,7 @@ public class RestaurantController {
         String beRyong = resource.getName();
         String address = resource.getAddress();
 
-        Restaurant restaurant = new Restaurant(1234L, beRyong, address);
+        Restaurant restaurant = new Restaurant( beRyong, address);
         restaurantService.addRestaurant(restaurant);
 
         URI location = new URI("/restaurants/"+restaurant.getId());
